@@ -1,0 +1,8 @@
+phidata  # Data engineering and orchestration framework used in this project
+python-dotenv  # Loads environment variables from a .env file (useful for API keys and config)
+yfinance  # Fetches historical and real-time market data from Yahoo Finance
+packaging  # Utilities for handling Python package metadata and version parsing
+duckduckgo-search  # Lightweight client for performing web searches via DuckDuckGo
+fastapi  # High-performance ASGI web framework for building APIs and backends
+uvicorn  # ASGI server used to run FastAPI applications (development/production) connection to fast api and user 
+groq  # GROQ query/client library (for querying headless CMS or GROQ-compatible APIs)

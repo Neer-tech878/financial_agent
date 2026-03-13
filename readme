@@ -1,0 +1,26 @@
+Hey the basic workload of the financial agent can be through the google search it gonna search the present tense
+ I mean using SO along with searching the present trends and also using that grok and connecting to that financial Wi-fi
+  and analyzing the finance and both the y finance data and the present current trend search data they both 
+  come and send to the groq LLM and summarizes and should give the output 
+  
+  
+$ARCHITECTURE
+
+User Question
+      ↓
+    Agent
+      ↓
+  LLM (Groq)//model
+      ↓
+ Tool Decision//tool
+      ↓
+DuckDuckGo Search//search tool
+      ↓
+Results Returned//
+      ↓
+LLM Formats Answer//instructions,markdown
+      ↓
+Markdown Response
+
+used groq api key which used llama llm from groq models
+forsearch used duck duck go
