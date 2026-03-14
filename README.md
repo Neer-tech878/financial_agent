@@ -51,10 +51,13 @@ requirements.txt     # Python dependencies
 
 ## Note
 -Never commit your `.env` file. It is already excluded in `.gitignore`.
--For incase .venv files not reading 
-in
+## Error incase
+1. For incase .venv files not reading 
+inside:
 .vscode folder >> settings.json>>
 {
   "python.terminal.useEnvFile": true
 }
 paste this command for reading env api keys in terminal
+2. Install multipart for playground.py functioning use command:
+pip install python-multipart
