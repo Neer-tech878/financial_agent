@@ -50,4 +50,11 @@ requirements.txt     # Python dependencies
 - `llama-3.3-70b-versatile` via Groq API
 
 ## Note
-Never commit your `.env` file. It is already excluded in `.gitignore`.
+-Never commit your `.env` file. It is already excluded in `.gitignore`.
+-For incase .venv files not reading 
+in
+.vscode folder >> settings.json>>
+{
+  "python.terminal.useEnvFile": true
+}
+paste this command for reading env api keys in terminal
