@@ -1,11 +1,12 @@
+import streamlit as st
 from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
 from phi.tools.duckduckgo import DuckDuckGo
-from dotenv import load_dotenv
-
-load_dotenv()
-
+#from dotenv import load_dotenv
+#load_dotenv()
+import os
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 # -----------------------------------------------------------------------
 # IMPORTANT: Do NOT use team= with Groq. It breaks in two ways:
 #   1. Groq passes additional_information=None -> pydantic validation error
@@ -15,10 +16,10 @@ load_dotenv()
 #   - 500K tokens/day (5x more than llama-3.3-70b-versatile)
 #   - 6K tokens/minute (enough for single-agent requests)
 # -----------------------------------------------------------------------
-
+st.title("📊 Financial Agent")
 agent = Agent(
     name="Financial & Web Research Agent",
-    model=Groq(id="llama-3.1-8b-instant"),
+    model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
     tools=[
         DuckDuckGo(),
         YFinanceTools(
@@ -39,10 +40,9 @@ agent = Agent(
     markdown=True,
 )
 
-agent.print_response(
-    "Summarize analyst recommendations for Cisco (CSCO) and NVIDIA (NVDA). "
-    "Show current stock price, fundamentals, and latest news for each. "
-    "Compare them and give a Buy/Hold/Sell recommendation with reasoning.",
-    stream=False,
-)
+query = st.text_input("Ask the Financial AI Agent")
 
+if query:
+    with st.spinner("Analyzing financial data..."):
+        response = agent.run(query)
+        st.markdown(response.content)
