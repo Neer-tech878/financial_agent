@@ -8,16 +8,16 @@ load_dotenv()
 
 # -----------------------------------------------------------------------
 # Available models on this Groq account (as of Sep 2026):
-#   - openai/gpt-oss-120b  ← best, strongest tool calling (used here)
-#   - openai/gpt-oss-20b   ← faster, lighter
-#   - qwen/qwen3.8-27b     ← alternative
+#   - qwen/qwen3.8-27b     ← free tier, tool-calling supported (used here)
+#   - openai/gpt-oss-120b  ← restricted, not available on all keys
+#   - openai/gpt-oss-20b   ← restricted, not available on all keys
 # NOTE: Most Llama/Gemma/Mixtral models have been decommissioned on Groq.
 # Check https://console.groq.com/docs/deprecations for updates.
 # -----------------------------------------------------------------------
 
 agent = Agent(
     name="Financial & Web Research Agent",
-    model=Groq(id="openai/gpt-oss-120b"),
+    model=Groq(id="qwen/qwen3.8-27b"),
     tools=[
         DuckDuckGo(),
         YFinanceTools(

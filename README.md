@@ -1,14 +1,14 @@
 # 💸 AI-Quant Financial Research Agent
 
 [![Powered by PhiData](https://img.shields.io/badge/Framework-PhiData-blue)](https://www.phidata.com/)
-[![Model-Groq](https://img.shields.io/badge/Model-Groq%20GPT--OSS--120B-orange)](https://groq.com/)
+[![Model-Groq](https://img.shields.io/badge/Model-Groq%20Qwen3.8--27B-orange)](https://groq.com/)
 [![Data-YFinance](https://img.shields.io/badge/Data-YFinance-green)](#)
 [![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Streamlit-FF4B4B)](https://agent-financial.streamlit.app/)
 
 ## 🌐 Live Demo
 > **Try it now → [https://agent-financial.streamlit.app/](https://agent-financial.streamlit.app/)**
 
-A high-frequency financial intelligence agent that combines real-time market data with web-based sentiment analysis. Built to bypass manual research gaps and provide immediate, data-driven **Buy / Hold / Sell** signals using **Groq's GPT-OSS-120B** model.
+A high-frequency financial intelligence agent that combines real-time market data with web-based sentiment analysis. Built to bypass manual research gaps and provide immediate, data-driven **Buy / Hold / Sell** signals using **Groq's Qwen 3.8-27B** model.
 
 ---
 
@@ -18,14 +18,14 @@ Modern stock analysis is fragmented between fundamental data (YFinance) and live
 ## 🧠 Core Intelligence
 - **Real-Time Fundamentals:** Fetches stock prices, analyst ratings, and company health metrics via `YFinance`
 - **Global Web Research:** Scrapes news and sentiment from the web using `DuckDuckGo`
-- **Groq GPT-OSS-120B:** High-speed inference via Groq's LPUs for near-instant reasoning
+- **Groq Qwen 3.8-27B:** High-speed inference via Groq's LPUs for near-instant reasoning
 - **Visual Reporting:** Outputs structured tables and formatted Markdown with clear sources and units
 
 ## 🛠️ Stack Components
 | Component | Technology |
 |-----------|-----------|
 | Orchestration | [PhiData](https://github.com/phidatahq/phidata) |
-| LLM Engine | Groq (`openai/gpt-oss-120b`) |
+| LLM Engine | Groq (`qwen/qwen3.8-27b`) |
 | Market Data | YFinanceTools |
 | Web Search | DuckDuckGo |
 | UI | Streamlit |

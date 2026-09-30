@@ -47,7 +47,7 @@ phi.api_key=os.getenv("API_KEY")
 
 agent = Agent(
     name="Financial & Web Research Agent",
-    model=Groq(id="openai/gpt-oss-120b"),
+    model=Groq(id="qwen/qwen3.8-27b"),
     tools=[
         DuckDuckGo(),
         YFinanceTools(
