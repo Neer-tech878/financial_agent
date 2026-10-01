@@ -1,5 +1,7 @@
 # 💸 AI-Quant Financial Research Agent
 
+> **Ask any stock question → get instant Buy / Hold / Sell signals powered by real-time data and AI.**
+
 [![Powered by PhiData](https://img.shields.io/badge/Framework-PhiData-blue)](https://www.phidata.com/)
 [![Model-Groq](https://img.shields.io/badge/Model-Groq%20Qwen3.8--27B-orange)](https://groq.com/)
 [![Data-YFinance](https://img.shields.io/badge/Data-YFinance-green)](#)
