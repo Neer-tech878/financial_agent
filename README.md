@@ -49,12 +49,17 @@ GROQ_API_KEY=your_groq_api_key_here
 ```
 > Get your free Groq API key at [console.groq.com/keys](https://console.groq.com/keys)
 
-### 3. Run the Agent (CLI)
+### 3. Run the Streamlit Web UI (Local)
+```bash
+streamlit run app.py
+```
+
+### 4. Run the Agent (CLI)
 ```bash
 python financial_agent.py
 ```
 
-### 4. Run the Playground UI (local)
+### 5. Run the Playground UI (PhiData)
 ```bash
 python playground.py
 ```
@@ -68,7 +73,7 @@ This app is deployed at **[https://agent-financial.streamlit.app/](https://agent
 ### How it was deployed:
 1. Push this repo to GitHub
 2. Go to [share.streamlit.io](https://share.streamlit.io) → **New app**
-3. Connect your GitHub repo → set **Main file** to `financial_agent.py`
+3. Connect your GitHub repo → set **Main file path** to `app.py`
 4. Go to **Settings → Secrets** and add:
 ```toml
 GROQ_API_KEY = "your_groq_api_key_here"
